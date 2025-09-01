@@ -1,21 +1,13 @@
 {
   "version": 2,
-  "name": "vanta-ai-platform",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "functions": {
-    "app/api/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
