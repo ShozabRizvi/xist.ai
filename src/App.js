@@ -94,7 +94,9 @@ const App = () => {
 };
 
 // Initialize the application
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
 
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
