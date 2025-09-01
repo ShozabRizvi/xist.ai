@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>VANTA AI</title>
+<meta name="application-name" content="VANTA AI">
+<meta name="description" content="Intelligence Beyond Limits - VANTA AI is an advanced AI-driven platform for security and misinformation detection, designed for government and enterprise use.">
+
+  <!-- ✅ Complete Favicon Setup -->
+  <link rel="icon" href="/public/logo.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/public/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/public/logo.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/public/logo.png">
+  <link rel="apple-touch-icon" href="public/logo.png">
+
+<!-- Professional Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ✅ FIXED: Proper Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+// ✅ FIXED: Tailwind Configuration (Production Safe)
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'prime-blue': '#1e40af',
+        'prime-indigo': '#4338ca',
+        'prime-purple': '#7c3aed',
+        'prime-cyan': '#0891b2',
+        'surface': '#0f172a',
+        'surface-light': '#1e293b',
+        'surface-lighter': '#334155',
+      },
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Space Grotesk', 'Inter', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'slide-in': 'slideIn 0.5s ease-out forwards',
+        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
+        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+        'typing': 'typing 2s steps(20) infinite alternate',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+    }
+  }
+}
+</script>
+
+<!-- ✅ FIXED: React Libraries (Production Ready) -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<!-- ✅ CRITICAL FIX: Load Babel BEFORE other scripts -->
+<script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
+
+<!-- Chart.js & TensorFlow -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+<!-- ✅ CSS - Keep your existing styles.css -->
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Test CSS (to verify styling works) -->
+<style>
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+h1, h2, h3 {
+  color: #3b82f6;
+}
+</style>
+
+<!-- Production Environment Setup -->
+<script>
+window.__DEV__ = false;
+// Suppress development warnings in production
+if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+  const originalConsoleWarn = console.warn;
+  console.warn = function(...args) {
+    const message = args.join(' ');
+    if (message.includes('cdn.tailwindcss.com') || 
+        message.includes('in-browser Babel') ||
+        message.includes('development build')) {
+      return;
+    }
+    originalConsoleWarn.apply(console, args);
+  };
+}
+</script>
+</head>
+
+<body>
+<div id="root"></div>
+
+<!-- ✅ FIXED ORDER: Load React components AFTER Babel is ready -->
+<script type="text/babel" src="src/contexts/UserSettingsContext.js"></script>
+<script type="text/babel" src="src/contexts/SettingsContext.js"></script>
+<script type="text/babel" src="src/utils/dateHelpers.js"></script>
+<script type="text/babel" src="src/services/AIServices.js"></script>
+<script type="text/babel" src="src/components/Auth/ApiKeyManager.js"></script>
+<script type="text/babel" src="src/components/Auth/AuthorityLoginModal.js"></script>
+<script type="text/babel" src="src/components/UI/VoiceVisualizer.js"></script>
+<script type="text/babel" src="src/components/UI/MessageBubble.js"></script>
+<script type="text/babel" src="src/components/Layout/Sidebar.js"></script>
+<script type="text/babel" src="src/components/Sections/HomeSection.js"></script>
+<script type="text/babel" src="src/components/Sections/VerifySection.js"></script>
+<script type="text/babel" src="src/components/Sections/CommunitySection.js"></script>
+<script type="text/babel" src="src/components/Sections/EducationSection.js"></script>
+<script type="text/babel" src="src/components/Sections/ProtectionSection.js"></script>
+<script type="text/babel" src="src/components/Sections/AnalyticsSection.js"></script>
+<script type="text/babel" src="src/components/Sections/AuthoritySection.js"></script>
+<script type="text/babel" src="src/components/Sections/SettingsSection.js"></script>
+<script type="text/babel" src="src/App.js"></script>
+
+</body>
+</html>
