@@ -1,13 +1,14 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "name": "vanta-ai-platform",
+  "version": "2.1.0",
+  "homepage": ".",
+  "scripts": {
+    "start": "live-server --open=index.html",
+    "build": "echo 'Static build ready'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
