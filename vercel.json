@@ -1,14 +1,22 @@
 {
-  "name": "vanta-ai-platform",
-  "version": "2.1.0",
-  "homepage": ".",
-  "scripts": {
-    "start": "live-server --open=index.html",
-    "build": "echo 'Static build ready'",
-    "deploy": "vercel --prod"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "version": 2,
+  "public": true,
+  "routes": [
+    {
+      "src": "/src/(.*)",
+      "dest": "/src/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
