@@ -3,10 +3,9 @@
   "version": "2.1.0",
   "description": " VANTA AI is an advanced AI-driven platform for security and misinformation detection, designed for government and enterprise use.",
   "main": "index.html",
-  "homepage": ".",
+  "homepage": ". ",
   "scripts": {
     "start": "live-server --port=3000 --open=index.html",
-    "build": "echo 'Static build ready - no compilation needed'",
     "optimize": "echo 'Optimization complete'",
     "deploy": "vercel --prod"
   },
