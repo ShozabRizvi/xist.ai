@@ -1,74 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xist AI</title>
-  <link rel="icon" href="/logo.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/logo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/logo.png">
-<link rel="apple-touch-icon" href="/public/logo.png">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out;
-}
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-  
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.4); }
-    50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(147, 51, 234, 0.4); }
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-  }
-  
-  /* Fix for animated delays */
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-</style>
-
-  <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            400: '#5B21B6',  // Darker purple
-            500: '#4C1D95',  // Deep purple
-            600: '#3B0764',  // Rich dark purple
-            700: '#2E1065',  // Very dark purple
-            800: '#1E1B4B'   // Almost navy purple
-          }
-        }
-      }
-    }
-  }
-</script>
-
-</head>
-<body>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Xist AI - Your Network Guardian Against Digital Threats" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Xist AI</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
